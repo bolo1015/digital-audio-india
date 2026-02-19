@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "signals"
+    label: "Market Signals"
+    folder: "data/signals"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["AdTech", "M&A", "Publishing", "Strategy", "AI"]}
+      - {label: "Date", name: "date", widget: "datetime", format: "MMM DD, YYYY", date_format: "MMM DD, YYYY", time_format: false}
+      - {label: "Strategic Implication", name: "implication", widget: "text"}
+      - {label: "Source URL", name: "link", widget: "string"}
