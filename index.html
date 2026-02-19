@@ -145,7 +145,7 @@
             <h2 class="font-display text-4xl sm:text-5xl font-bold text-midnight">Market Signals</h2>
             <p class="mt-4 text-lg text-slate-600">Curated intelligence and strategic implications from the bleeding edge of digital audio.</p>
           </div>
-          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div id="signals-container" class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
               <div class="flex justify-between items-center mb-4">
                 <span class="text-sm font-bold text-teal-accent uppercase tracking-wider">AdTech</span>
@@ -200,8 +200,64 @@
         </div>
       </div>
     </footer>
+<script>
+  async function loadMarketSignals() {
+    try {
+      // 1. Fetch the list of published files from your repository
+      const response = await fetch('https://api.github.com/repos/bolo1015/digital-audio-india/contents/data/signals');
+      
+      // If there's an error, fail silently and keep showing the dummy cards
+      if (!response.ok) return; 
+      
+      const files = await response.json();
+      const jsonFiles = files.filter(file => file.name.endsWith('.json'));
 
-    <script>
+      // 2. Fetch the actual content from your live site
+      const signalsData = await Promise.all(
+        jsonFiles.map(async (file) => {
+          const res = await fetch('/data/signals/' + file.name);
+          return await res.json();
+        })
+      );
+
+      // 3. Sort by date (newest first)
+      signalsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const container = document.getElementById('signals-container');
+      if (!container) return;
+
+      // 4. Clear the dummy cards
+      container.innerHTML = '';
+
+      // 5. Display only the 3 most recent signals on the homepage
+      const topSignals = signalsData.slice(0, 3);
+
+      topSignals.forEach(signal => {
+        const dateObj = new Date(signal.date);
+        const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+        const card = `
+          <div class="bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm font-bold text-teal-accent uppercase tracking-wider">${signal.category}</span>
+              <span class="text-sm text-slate-500">${formattedDate}</span>
+            </div>
+            <h4 class="font-display text-xl font-bold text-midnight mb-3">${signal.headline}</h4>
+            <p class="text-slate-600 italic text-sm mb-4 flex-grow"><strong>Strategic Implication:</strong> ${signal.implication}</p>
+            <a href="${signal.link}" target="_blank" class="text-teal-accent font-semibold mt-auto pt-2 group inline-block text-sm">Read Original Source <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+
+    } catch (error) {
+      console.error('Error loading signals:', error);
+    }
+  }
+
+  // Run the script as soon as the page loads
+  document.addEventListener('DOMContentLoaded', loadMarketSignals);
+</script>    <script>
       document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.getElementById('hero-carousel');
         if (carousel) {
