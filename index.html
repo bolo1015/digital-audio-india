@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Audio India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              'midnight': '#0f172a',
+              'teal-accent': '#0d9488',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-slate-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-4">
+            <img src="https://picsum.photos/40/40?grayscale" alt="Digital Audio India Logo" class="h-10 w-10 rounded-full object-cover" />
+            <span class="font-display text-2xl font-bold text-midnight">
+              Digital Audio India
+            </span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Featured Insights</a>
+          <a href="clients.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Clients</a>
+          <a href="about.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">About</a>
+          <a href="contact.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-midnight">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero-carousel" class="relative w-full h-[80vh] min-h-[500px] overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100">
+          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=1)"></div>
+          <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
+          <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
+            <div class="max-w-3xl space-y-6">
+              <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">The 2026 Shift: Generative AI & Dynamic Audio Ad Insertion.</h1>
+              <p class="text-xl md:text-2xl font-light text-slate-200">How algorithmic creative optimization is redefining programmatic yield.</p>
+              <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
+          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=2)"></div>
+          <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
+          <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
+            <div class="max-w-3xl space-y-6">
+              <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">Algorithmic Survival for Legacy Broadcasters.</h1>
+              <p class="text-xl md:text-2xl font-light text-slate-200">A blueprint for transitioning traditional radio archives into profitable digital on-demand streams.</p>
+              <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
+          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=3)"></div>
+          <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
+          <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
+            <div class="max-w-3xl space-y-6">
+              <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">Predictive Yield in Mobile Streaming.</h1>
+              <p class="text-xl md:text-2xl font-light text-slate-200">Unlocking subscription economics and maximizing AdTech architecture.</p>
+              <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="max-w-2xl mx-auto lg:mx-0">
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-midnight">Industry Expertise</h2>
+            <p class="mt-4 text-lg text-slate-600">We provide strategic counsel and technological implementation for leaders across the digital audio ecosystem.</p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Digital Audio Publishers</h3>
+              <p class="text-slate-600 flex-grow">We help publishers maximize programmatic inventory yield and deepen audience monetization through advanced data strategies and platform optimization.</p>
+              <a href="publishers.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Podcasts</h3>
+              <p class="text-slate-600 flex-grow">Our team provides frameworks for scaling podcast networks, implementing multi-language AI localization, and engineering robust listener retention programs.</p>
+              <a href="podcasts.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Radio Broadcasters</h3>
+              <p class="text-slate-600 flex-grow">We guide legacy radio broadcasters through comprehensive digital transformation, including mobile app deployment and the modernization of archaic workflows.</p>
+              <a href="radio.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Video Podcasters</h3>
+              <p class="text-slate-600 flex-grow">Unlock new revenue by focusing on strategic cross-platform syndication and architecting systems to extract maximum audio yield from existing video assets.</p>
+              <a href="video-podcasts.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Programmatic Audio Advertising</h3>
+              <p class="text-slate-600 flex-grow">Our expertise lies in architecting proprietary DSP/SSP platforms and optimizing high-frequency bid streams for superior campaign performance and efficiency.</p>
+              <a href="programmatic.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Content Management & Creation</h3>
+              <p class="text-slate-600 flex-grow">Leverage our solutions for AI-driven metadata extraction and build automated content pipelines to reduce overhead and accelerate time-to-market.</p>
+              <a href="content.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-50 py-20 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="max-w-2xl mx-auto lg:mx-0">
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-midnight">Market Signals</h2>
+            <p class="mt-4 text-lg text-slate-600">Curated intelligence and strategic implications from the bleeding edge of digital audio.</p>
+          </div>
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold text-teal-accent uppercase tracking-wider">AdTech</span>
+                <span class="text-sm text-slate-500">Oct 26, 2025</span>
+              </div>
+              <h4 class="font-display text-xl font-bold text-midnight mb-3">Spotify Acquires AI Voice Synthesis Firm for Hyper-Targeted Ads</h4>
+              <p class="text-slate-600 italic text-sm mb-4 flex-grow"><strong>Strategic Implication:</strong> This signals a major push towards personalized, scalable audio advertising, challenging traditional ad production models.</p>
+              <a href="#" class="text-teal-accent font-semibold mt-auto pt-2 group inline-block text-sm">Read Full Analysis <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold text-teal-accent uppercase tracking-wider">M&A</span>
+                <span class="text-sm text-slate-500">Oct 24, 2025</span>
+              </div>
+              <h4 class="font-display text-xl font-bold text-midnight mb-3">Apple Consolidates Podcast Distribution with $500M Acquisition</h4>
+              <p class="text-slate-600 italic text-sm mb-4 flex-grow"><strong>Strategic Implication:</strong> Increased platform power may lead to new exclusivity deals, impacting discovery for independent creators.</p>
+              <a href="#" class="text-teal-accent font-semibold mt-auto pt-2 group inline-block text-sm">Read Full Analysis <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-sm font-bold text-teal-accent uppercase tracking-wider">Publishing</span>
+                <span class="text-sm text-slate-500">Oct 21, 2025</span>
+              </div>
+              <h4 class="font-display text-xl font-bold text-midnight mb-3">Major Publisher Shifts to Programmatic-Only for Audio Inventory</h4>
+              <p class="text-slate-600 italic text-sm mb-4 flex-grow"><strong>Strategic Implication:</strong> The industry is accelerating its move away from direct-sold campaigns, prioritizing efficiency and data-driven sales.</p>
+              <a href="#" class="text-teal-accent font-semibold mt-auto pt-2 group inline-block text-sm">Read Full Analysis <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+          </div>
+          <div class="mt-16 text-center">
+            <a href="signals.html" class="inline-block border border-teal-accent text-teal-accent font-semibold py-3 px-8 rounded-md hover:bg-teal-accent hover:text-white transition-colors duration-300">View All Market Signals</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-midnight text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+          <div class="flex items-center space-x-4">
+            <img src="https://picsum.photos/32/32?grayscale" alt="Digital Audio India Logo" class="h-8 w-8 rounded-full object-cover" />
+            <span class="font-display text-xl font-bold">Digital Audio India</span>
+          </div>
+          <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Privacy Policy</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Terms of Service</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Careers</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Site Map</a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
+          <p>&copy; 2026 Digital Audio India. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.getElementById('hero-carousel');
+        if (carousel) {
+          const slides = carousel.querySelectorAll('.carousel-slide');
+          let currentSlide = 0;
+          const slideInterval = setInterval(nextSlide, 5000);
+
+          function nextSlide() {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

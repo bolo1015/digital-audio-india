@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmatic Audio & AdTech - Digital Audio India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              'midnight': '#0f172a',
+              'teal-accent': '#0d9488',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-4">
+            <img src="https://picsum.photos/40/40?grayscale" alt="Digital Audio India Logo" class="h-10 w-10 rounded-full object-cover" />
+            <span class="font-display text-2xl font-bold text-midnight">
+              Digital Audio India
+            </span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="signals.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Featured Insights</a>
+          <a href="clients.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Clients</a>
+          <a href="about.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">About</a>
+          <a href="contact.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-midnight">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-midnight text-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+          <p class="font-bold text-teal-accent uppercase tracking-wider text-sm mb-4">Service Area</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-extrabold">Programmatic Audio & AdTech Architecture.</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-slate-300">Maximizing yield and building the infrastructure for the next generation of audio monetization.</p>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="font-display text-4xl font-bold text-midnight">Audio is not Display.</h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+             Standard programmatic pipes are notoriously inefficient for digital audio. From frequency capping and creative attribution to managing high-fidelity audio bid streams, maximizing eCPM requires specialized infrastructure. We architect proprietary DSP and SSP solutions designed explicitly for the economics of the ear.
+            </p>
+        </div>
+      </section>
+
+      <section class="bg-slate-50 py-20 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">DSP/SSP Implementation</h3>
+              <p class="text-slate-600">Custom integration of Demand-Side and Supply-Side Platforms. We build and deploy self-serve ad networks tailored for agencies and retail buyers.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Yield Optimization & Audits</h3>
+              <p class="text-slate-600">Deep-dive analysis of current programmatic chains. We identify revenue leaks, optimize floor pricing, and structure private marketplace (PMP) deals to drive maximum eCPM.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">AI & Dynamic Creative (DCO)</h3>
+              <p class="text-slate-600">Implementation of real-time, AI-driven audio creative optimization. Deliver hyper-personalized ad experiences based on listener context, location, and behavior.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-900 text-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+          <h2 class="font-display text-4xl font-bold">Engineered for Growth.</h2>
+          <p class="mt-4 text-xl text-slate-300">Our architectural strategies and custom DSP network deployments (including platforms like PublifyX) have successfully driven a <span class="text-teal-accent font-bold">300% increase</span> in on-platform programmatic ad-spend for our partners.</p>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center">
+           <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight">
+            Audit Your Audio Yield.
+          </h2>
+          <a href="contact.html" class="mt-8 inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">
+            Schedule a Technical Review
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-midnight text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+          <div class="flex items-center space-x-4">
+            <img src="https://picsum.photos/32/32?grayscale" alt="Digital Audio India Logo" class="h-8 w-8 rounded-full object-cover" />
+            <span class="font-display text-xl font-bold">Digital Audio India</span>
+          </div>
+          <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Privacy Policy</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Terms of Service</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Careers</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Site Map</a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
+          <p>&copy; 2026 Digital Audio India. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

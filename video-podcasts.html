@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Podcasters & Creators - Digital Audio India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              'midnight': '#0f172a',
+              'teal-accent': '#0d9488',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-4">
+            <img src="https://picsum.photos/40/40?grayscale" alt="Digital Audio India Logo" class="h-10 w-10 rounded-full object-cover" />
+            <span class="font-display text-2xl font-bold text-midnight">
+              Digital Audio India
+            </span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="signals.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Featured Insights</a>
+          <a href="clients.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Clients</a>
+          <a href="about.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">About</a>
+          <a href="contact.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-midnight">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+       <section class="bg-midnight text-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+          <p class="font-bold text-teal-accent uppercase tracking-wider text-sm mb-4">Service Area</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-extrabold">Video Podcasters & Creators.</h1>
+          <p class="mt-4 max-w-3xl mx-auto text-lg sm:text-xl text-slate-300">Unlocking cross-platform syndication and architecting systems to extract maximum programmatic yield from existing video assets.</p>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="font-display text-4xl font-bold text-midnight">The Omnichannel Audience.</h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+             Many top-tier creators focus heavily on visual platforms like YouTube, treating their audio RSS feeds as secondary distribution channels. This results in significant lost revenue. Audio CPMs often outpace video display networks when optimized correctly. We architect the cross-platform syndication and programmatic pipelines required to fully monetize your audience, regardless of where they consume your content.
+            </p>
+        </div>
+      </section>
+
+       <section class="bg-slate-50 py-20 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Cross-Platform Syndication.</h3>
+              <p class="text-slate-600">Automated distribution strategies that push your content across Spotify, Apple Podcasts, YouTube Music, and regional platforms seamlessly, maximizing your total addressable audience.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Audio-First Monetization.</h3>
+              <p class="text-slate-600">Transitioning YouTube-native creators into high-yield audio ecosystems. We implement Dynamic Ad Insertion (DAI) and specialized SSP connections for your audio feeds.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="font-display text-2xl font-bold text-midnight mb-4">AI-Driven Formatting.</h3>
+              <p class="text-slate-600">Deploying AI workflows to automatically extract, clean, and master high-fidelity audio from your raw video files, optimizing it for pure-audio streaming environments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-900 text-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+          <h2 class="font-display text-4xl font-bold">Scaling the Creator Economy.</h2>
+          <p class="mt-4 text-xl text-slate-300">We provide the go-to-market playbooks and AdTech infrastructure that turn independent creator IP into scalable, multi-million dollar digital media companies.</p>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center">
+           <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight">
+            Maximize Your Omnichannel Yield.
+          </h2>
+          <a href="contact.html" class="mt-8 inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">
+            Discuss Creator Strategies
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-midnight text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+          <div class="flex items-center space-x-4">
+            <img src="https://picsum.photos/32/32?grayscale" alt="Digital Audio India Logo" class="h-8 w-8 rounded-full object-cover" />
+            <span class="font-display text-xl font-bold">Digital Audio India</span>
+          </div>
+          <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Privacy Policy</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Terms of Service</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Careers</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Site Map</a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
+          <p>&copy; 2026 Digital Audio India. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

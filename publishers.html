@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Audio Publishers - Digital Audio India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              'midnight': '#0f172a',
+              'teal-accent': '#0d9488',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-800 font-sans">
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-4">
+            <img src="https://picsum.photos/40/40?grayscale" alt="Digital Audio India Logo" class="h-10 w-10 rounded-full object-cover" />
+            <span class="font-display text-2xl font-bold text-midnight">
+              Digital Audio India
+            </span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="signals.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Featured Insights</a>
+          <a href="clients.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Clients</a>
+          <a href="about.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">About</a>
+          <a href="contact.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Contact</a>
+        </div>
+        <button class="md:hidden text-midnight">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg-slate-50 py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+          <p class="font-bold text-teal-accent uppercase tracking-wider text-sm mb-4">Service Area</p>
+          <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-midnight">Digital Audio Publishers.</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-slate-600">Maximizing programmatic inventory yield and deepening audience monetization through advanced data strategies.</p>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="font-display text-4xl font-bold text-midnight">The Yield Gap in Digital Publishing.</h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+             Many digital publishers possess massive, engaged listener bases but fail to capture their true CPM potential. As the industry shifts toward privacy-first, addressable environments, relying solely on direct sales or unoptimized open exchanges leaves revenue on the table. We bridge the yield gap by architecting sophisticated, hybrid monetization strategies.
+            </p>
+        </div>
+      </section>
+
+      <section class="bg-midnight py-20 sm:py-24">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
+            <div class="bg-slate-800 p-8 rounded-lg border-t-4 border-teal-accent">
+              <h3 class="font-display text-2xl font-bold mb-4">Hybrid Header Bidding & SSP Orchestration.</h3>
+              <p class="text-slate-300">We implement advanced server-side and client-side audio bidding environments to increase competition, boost fill rates, and drive higher clearing prices for your premium inventory.</p>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-lg border-t-4 border-teal-accent">
+              <h3 class="font-display text-2xl font-bold mb-4">First-Party Data & Addressability.</h3>
+              <p class="text-slate-300">Transition your audience into targetable, high-value segments. We help publishers leverage first-party data and contextual signals to command premium CPMs in a privacy-compliant ecosystem.</p>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-lg border-t-4 border-teal-accent">
+              <h3 class="font-display text-2xl font-bold mb-4">Platform & Tech Stack Optimization.</h3>
+              <p class="text-slate-300">From evaluating ad servers (like Triton Digital) to refining mobile app user experiences, we optimize your entire technical infrastructure to ensure seamless, low-latency ad delivery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white text-slate-900 py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+          <h2 class="font-display text-4xl font-bold text-midnight">Proven Transformation.</h2>
+          <p class="mt-4 text-xl text-slate-600">We have successfully guided major legacy publishers—including the Times of India Group—through the complex transition from traditional broadcasting models to highly profitable, modern digital audio services.</p>
+        </div>
+      </section>
+
+      <section class="bg-slate-50 py-20 sm:py-24">
+        <div class="container mx-auto px-6 text-center">
+           <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight">
+            Unlock the Value of Your Inventory.
+          </h2>
+          <a href="contact.html" class="mt-8 inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">
+            Discuss Publisher Solutions
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-midnight text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+          <div class="flex items-center space-x-4">
+            <img src="https://picsum.photos/32/32?grayscale" alt="Digital Audio India Logo" class="h-8 w-8 rounded-full object-cover" />
+            <span class="font-display text-xl font-bold">Digital Audio India</span>
+          </div>
+          <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Privacy Policy</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Terms of Service</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Careers</a>
+            <a href="#" class="text-slate-300 hover:text-teal-accent transition-colors duration-300 text-sm">Site Map</a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-400">
+          <p>&copy; 2026 Digital Audio India. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
