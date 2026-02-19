@@ -57,7 +57,7 @@
       </section>
 
       <section class="bg-slate-50 py-20 sm:py-24">
-        <div class="container mx-auto px-6 max-w-4xl">
+        <div id="signals-archive-container" class="container mx-auto px-6 max-w-4xl">
           <div class="space-y-8">
             
             <div class="bg-white border border-slate-200 rounded-lg p-6 md:p-8 hover:shadow-md transition-shadow duration-300 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
@@ -140,5 +140,62 @@
         </div>
       </div>
     </footer>
+    <script>
+  async function loadAllSignals() {
+    try {
+      // 1. Fetch the list of published files from your repository
+      const response = await fetch('https://api.github.com/repos/bolo1015/digital-audio-india/contents/data/signals');
+      
+      if (!response.ok) return; 
+      
+      const files = await response.json();
+      const jsonFiles = files.filter(file => file.name.endsWith('.json'));
+
+      // 2. Fetch the actual content
+      const signalsData = await Promise.all(
+        jsonFiles.map(async (file) => {
+          const res = await fetch('/data/signals/' + file.name);
+          return await res.json();
+        })
+      );
+
+      // 3. Sort by date (newest first)
+      signalsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const container = document.getElementById('signals-archive-container');
+      if (!container) return;
+
+      // 4. Clear out the hardcoded dummy HTML cards
+      container.innerHTML = '';
+
+      // 5. Loop through ALL signals and generate the wide card layout
+      signalsData.forEach(signal => {
+        const dateObj = new Date(signal.date);
+        const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+        const card = `
+          <div class="bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row gap-6 mb-6">
+            <div class="md:w-1/5 flex-shrink-0 flex flex-col">
+              <span class="text-sm font-bold text-teal-accent uppercase tracking-wider mb-1">${signal.category}</span>
+              <span class="text-sm font-bold text-slate-500">${formattedDate}</span>
+            </div>
+            <div class="md:w-4/5 flex flex-col">
+              <h4 class="font-display text-2xl font-bold text-midnight mb-3">${signal.headline}</h4>
+              <p class="text-slate-600 italic text-base mb-4 flex-grow"><strong>Strategic Implication:</strong> ${signal.implication}</p>
+              <a href="${signal.link}" target="_blank" class="text-teal-accent font-semibold mt-auto pt-2 group inline-block text-sm">Read Original Source <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
+            </div>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+
+    } catch (error) {
+      console.error('Error loading archive signals:', error);
+    }
+  }
+
+  // Run the script as soon as the page loads
+  document.addEventListener('DOMContentLoaded', loadAllSignals);
+</script>
   </body>
 </html>
