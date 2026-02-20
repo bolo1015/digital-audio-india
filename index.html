@@ -62,7 +62,7 @@
       <section id="hero-carousel" class="relative w-full h-[80vh] min-h-[500px] overflow-hidden">
         <!-- Slide 1 -->
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100">
-          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=1)"></div>
+          <div id="hero-bg-0" class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=1)"></div>
           <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
           <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
             <div class="max-w-3xl space-y-6">
@@ -74,24 +74,24 @@
         </div>
         <!-- Slide 2 -->
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=2)"></div>
+          <div id="hero-bg-1" class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=2)"></div>
           <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
           <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
             <div class="max-w-3xl space-y-6">
               <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">Algorithmic Survival for Legacy Broadcasters.</h1>
-              <p class="text-xl md:text-2xl font-light text-slate-200">A blueprint for transitioning traditional radio archives into profitable digital on-demand streams.</p>
+              <p id="hero-subhead-1" class="text-xl md:text-2xl font-light text-slate-200">A blueprint for transitioning traditional radio archives into profitable digital on-demand streams.</p>
               <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
             </div>
           </div>
         </div>
         <!-- Slide 3 -->
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-          <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=3)"></div>
+          <div id="hero-bg-2" class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url(https://picsum.photos/1920/1080?random=3)"></div>
           <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
           <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-              <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">Predictive Yield in Mobile Streaming.</h1>
-              <p class="text-xl md:text-2xl font-light text-slate-200">Unlocking subscription economics and maximizing AdTech architecture.</p>
+              <h1 id="hero-title-2" class="font-display text-5xl md:text-7xl font-extrabold leading-tight">Predictive Yield in Mobile Streaming.</h1>
+              <p id="hero-subhead-2" class="text-xl md:text-2xl font-light text-slate-200">Unlocking subscription economics and maximizing AdTech architecture.</p>
               <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
             </div>
           </div>
@@ -106,33 +106,33 @@
           </div>
           <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Digital Audio Publishers</h3>
-              <p class="text-slate-600 flex-grow">We help publishers maximize programmatic inventory yield and deepen audience monetization through advanced data strategies and platform optimization.</p>
+              <h3 id="industry-name-0" class="font-display text-2xl font-bold text-midnight mb-4">Digital Audio Publishers</h3>
+              <p id="industry-desc-0" class="text-slate-600 flex-grow">We help publishers maximize programmatic inventory yield and deepen audience monetization through advanced data strategies and platform optimization.</p>
               <a href="publishers.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Podcasts</h3>
-              <p class="text-slate-600 flex-grow">Our team provides frameworks for scaling podcast networks, implementing multi-language AI localization, and engineering robust listener retention programs.</p>
+              <h3 id="industry-name-1" class="font-display text-2xl font-bold text-midnight mb-4">Podcasts</h3>
+              <p id="industry-desc-1" class="text-slate-600 flex-grow">Our team provides frameworks for scaling podcast networks, implementing multi-language AI localization, and engineering robust listener retention programs.</p>
               <a href="podcasts.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Radio Broadcasters</h3>
-              <p class="text-slate-600 flex-grow">We guide legacy radio broadcasters through comprehensive digital transformation, including mobile app deployment and the modernization of archaic workflows.</p>
+              <h3 id="industry-name-2" class="font-display text-2xl font-bold text-midnight mb-4">Radio Broadcasters</h3>
+              <p id="industry-desc-2" class="text-slate-600 flex-grow">We guide legacy radio broadcasters through comprehensive digital transformation, including mobile app deployment and the modernization of archaic workflows.</p>
               <a href="radio.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Video Podcasters</h3>
-              <p class="text-slate-600 flex-grow">Unlock new revenue by focusing on strategic cross-platform syndication and architecting systems to extract maximum audio yield from existing video assets.</p>
+              <h3 id="industry-name-3" class="font-display text-2xl font-bold text-midnight mb-4">Video Podcasters</h3>
+              <p id="industry-desc-3" class="text-slate-600 flex-grow">Unlock new revenue by focusing on strategic cross-platform syndication and architecting systems to extract maximum audio yield from existing video assets.</p>
               <a href="video-podcasts.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Programmatic Audio Advertising</h3>
-              <p class="text-slate-600 flex-grow">Our expertise lies in architecting proprietary DSP/SSP platforms and optimizing high-frequency bid streams for superior campaign performance and efficiency.</p>
+              <h3 id="industry-name-4" class="font-display text-2xl font-bold text-midnight mb-4">Programmatic Audio Advertising</h3>
+              <p id="industry-desc-4" class="text-slate-600 flex-grow">Our expertise lies in architecting proprietary DSP/SSP platforms and optimizing high-frequency bid streams for superior campaign performance and efficiency.</p>
               <a href="programmatic.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
-              <h3 class="font-display text-2xl font-bold text-midnight mb-4">Content Management & Creation</h3>
-              <p class="text-slate-600 flex-grow">Leverage our solutions for AI-driven metadata extraction and build automated content pipelines to reduce overhead and accelerate time-to-market.</p>
+              <h3 id="industry-name-5" class="font-display text-2xl font-bold text-midnight mb-4">Content Management & Creation</h3>
+              <p id="industry-desc-5" class="text-slate-600 flex-grow">Leverage our solutions for AI-driven metadata extraction and build automated content pipelines to reduce overhead and accelerate time-to-market.</p>
               <a href="content.html" class="text-teal-accent font-semibold mt-6 group inline-block">Explore Solutions <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span></a>
             </div>
           </div>
@@ -286,18 +286,41 @@
     });
   }
 </script>
-    <script>
-  async function loadHomePage() {
+  <script>
+  async function loadMasterContent() {
     try {
       const response = await fetch('/data/pages/home.json');
-      if (!response.ok) return; 
+      if (!response.ok) return;
       const data = await response.json();
-      
-      document.getElementById('home-hero-headline').innerText = data.hero_headline;
-      document.getElementById('home-hero-subhead').innerText = data.hero_subhead;
-    } catch (error) { console.error('Error loading Home page data:', error); }
+
+      // 1. Update Hero Slides (Headlines, Subheads, and Images)
+      if (data.slides && data.slides.length > 0) {
+        data.slides.forEach((slide, index) => {
+          // Slide 1 uses our original unique IDs, Slides 2 & 3 use the numbered IDs you just added
+          const titleId = index === 0 ? 'home-hero-headline' : `hero-title-${index}`;
+          const subId = index === 0 ? 'home-hero-subhead' : `hero-subhead-${index}`;
+          const bgId = `hero-bg-${index}`;
+          
+          if (document.getElementById(titleId)) document.getElementById(titleId).innerText = slide.title;
+          if (document.getElementById(subId)) document.getElementById(subId).innerText = slide.subhead;
+          if (document.getElementById(bgId)) {
+            document.getElementById(bgId).style.backgroundImage = `url(${slide.image})`;
+          }
+        });
+      }
+
+      // 2. Update Industry Sections
+      if (data.industries && data.industries.length > 0) {
+        data.industries.forEach((item, index) => {
+          const nameId = `industry-name-${index}`;
+          const descId = `industry-desc-${index}`;
+          if (document.getElementById(nameId)) document.getElementById(nameId).innerText = item.name;
+          if (document.getElementById(descId)) document.getElementById(descId).innerText = item.desc;
+        });
+      }
+    } catch (e) { console.error("CMS Load Error:", e); }
   }
-  document.addEventListener('DOMContentLoaded', loadHomePage);
-</script>
+  document.addEventListener('DOMContentLoaded', loadMasterContent);
+</script>  
   </body>
 </html>
