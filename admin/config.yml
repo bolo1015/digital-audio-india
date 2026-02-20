@@ -25,3 +25,15 @@ collections:
             fields:
               - {label: "Industry Name", name: "name", widget: "string"}
               - {label: "Industry Description", name: "desc", widget: "text"}
+- name: "services"
+    label: "Industry Pages"
+    folder: "data/services"
+    create: true # This allows you to add NEW pages dynamically
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Hero Image", name: "image", widget: "image"}
+      - {label: "Main Body Content", name: "body", widget: "markdown"}
+      - {label: "Show Case Studies?", name: "show_case_studies", widget: "boolean", default: true}
+      - {label: "Case Study Text", name: "case_study_body", widget: "markdown"}
