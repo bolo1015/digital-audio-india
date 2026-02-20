@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Deep Dive | Digital Audio India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="bg-slate-50 font-sans">
+    
+    <header class="bg-white shadow-sm py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/index.html" class="font-display text-2xl font-bold tracking-tight text-slate-900">
+                DIGITAL<span class="text-teal-600 underline decoration-2 underline-offset-4">AUDIO</span>INDIA
+            </a>
+            <a href="/signals.html" class="text-teal-600 font-medium hover:text-teal-700">← Back to Signals</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 max-w-3xl">
+        <div id="article-content" class="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm">
+            <p class="text-slate-500 text-lg">Loading deep dive...</p>
+        </div>
+    </main>
+
+    <script>
+        async function loadArticle() {
+            const contentDiv = document.getElementById('article-content');
+            
+            // Extract the article ID from the URL (e.g., ?id=0)
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            if (articleId === null) {
+                contentDiv.innerHTML = '<h1 class="text-3xl font-bold text-slate-900">Article not found.</h1><p class="mt-4 text-slate-600">Please return to the Signals page.</p>';
+                return;
+            }
+
+            try {
+                // Fetch the master database
+                const response = await fetch('/data/signals.json');
+                if (!response.ok) throw new Error("Database not found");
+                
+                const data = await response.json();
+                const article = data.articles[articleId];
+
+                // If the article exists, paint it onto the page
+                if (article) {
+                    const date = new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    const htmlBody = marked.parse(article.body || '');
+
+                    contentDiv.innerHTML = `
+                        <span class="text-teal-600 font-bold text-sm tracking-widest uppercase mb-4 block">${date}</span>
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">${article.title}</h1>
+                        <div class="prose prose-lg prose-slate max-w-none text-slate-700">
+                            ${htmlBody}
+                        </div>
+                    `;
+                } else {
+                    contentDiv.innerHTML = '<h1 class="text-3xl font-bold text-slate-900">Article not found.</h1>';
+                }
+            } catch (error) {
+                contentDiv.innerHTML = '<p class="text-slate-500 text-lg">Error loading the article.</p>';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadArticle);
+    </script>
+</body>
+</html>
