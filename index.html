@@ -66,8 +66,8 @@
           <div class="absolute inset-0 w-full h-full bg-slate-900/75"></div>
           <div class="relative z-10 flex flex-col items-start justify-center h-full text-white container mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-              <h1 class="font-display text-5xl md:text-7xl font-extrabold leading-tight">The 2026 Shift: Generative AI & Dynamic Audio Ad Insertion.</h1>
-              <p class="text-xl md:text-2xl font-light text-slate-200">How algorithmic creative optimization is redefining programmatic yield.</p>
+              <h1 id="home-hero-headline" class="font-display text-5xl md:text-7xl font-extrabold leading-tight">The 2026 Shift: Generative AI & Dynamic Audio Ad Insertion.</h1>
+              <p id="home-hero-subhead" class="text-xl md:text-2xl font-light text-slate-200">How algorithmic creative optimization is redefining programmatic yield.</p>
               <a href="#" class="inline-block bg-teal-accent text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition-colors duration-300 text-lg">Read the Insight</a>
             </div>
           </div>
@@ -285,6 +285,35 @@
       }
     });
   }
+</script>
+    <script>
+  async function loadContactPage() {
+    try {
+      const response = await fetch('/data/pages/contact.json');
+      if (!response.ok) return; 
+      const data = await response.json();
+      
+      // The Draft/Hide Toggle Logic
+      if (data.is_published === false) {
+          document.body.innerHTML = "<div style='padding: 100px 20px; text-align: center; font-family: sans-serif;'><h1 style='font-size: 2rem; margin-bottom: 1rem;'>Page Under Construction</h1><p>This page is currently being updated. Please check back later.</p></div>";
+          return;
+      }
+
+      document.getElementById('contact-hero-headline').innerText = data.hero_headline;
+      document.getElementById('contact-hero-subhead').innerText = data.hero_subhead;
+      
+      // Update Emails and their mailto links
+      const consultingEl = document.getElementById('contact-email-consulting');
+      consultingEl.innerText = data.email_consulting;
+      consultingEl.href = "mailto:" + data.email_consulting;
+      
+      const pressEl = document.getElementById('contact-email-press');
+      pressEl.innerText = data.email_press;
+      pressEl.href = "mailto:" + data.email_press;
+
+    } catch (error) { console.error('Error loading Contact page data:', error); }
+  }
+  document.addEventListener('DOMContentLoaded', loadContactPage);
 </script>
   </body>
 </html>
