@@ -21,9 +21,10 @@
   ],
   "slides": [
     {
-      "title": "Is Audio the Cousin you Must Invite to Video's Birthday",
+      "title": "TESTING CMS SUCCESS",
       "subhead": "If this is true.  Do you believe that people with stop listening all together.",
-      "image": "/assets/images/lower-level-kitchen-dry-kitchen-2.jpeg"
+      "image": "/assets/images/lower-level-kitchen-dry-kitchen-2.jpeg",
+      "link": "/contact.html"
     }
   ]
 }
