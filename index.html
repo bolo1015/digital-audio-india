@@ -41,13 +41,14 @@
         <div class="flex items-center space-x-4">
           <a href="index.html" class="flex items-center space-x-4">
             <img src="https://picsum.photos/40/40?grayscale" alt="Digital Audio India Logo" class="h-10 w-10 rounded-full object-cover" />
-            <span class="font-display text-2xl font-bold text-midnight">
-              Digital Audio India
-            </span>
+            <span class="font-display text-2xl font-bold tracking-tight text-midnight">
+  DIGITAL<span class="text-teal-600 underline decoration-2 underline-offset-4">AUDIO</span>INDIA
+</span>
           </a>
         </div>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Featured Insights</a>
+          <a href="#industry-expertise" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Industry Expertise</a>
+          <a href="/signals.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Market Signals</a>
           <a href="clients.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Clients</a>
           <a href="about.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">About</a>
           <a href="contact.html" class="text-midnight font-medium hover:text-teal-accent transition-colors duration-300">Contact</a>
@@ -305,6 +306,10 @@
           if (document.getElementById(subId)) document.getElementById(subId).innerText = slide.subhead;
           if (document.getElementById(bgId)) {
             document.getElementById(bgId).style.backgroundImage = `url(${slide.image})`;
+            const linkId = `hero-link-${index}`;
+if (document.getElementById(linkId)) {
+    document.getElementById(linkId).setAttribute('href', slide.link || '#');
+}
           }
         });
       }
