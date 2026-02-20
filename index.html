@@ -287,33 +287,17 @@
   }
 </script>
     <script>
-  async function loadContactPage() {
+  async function loadHomePage() {
     try {
-      const response = await fetch('/data/pages/contact.json');
+      const response = await fetch('/data/pages/home.json');
       if (!response.ok) return; 
       const data = await response.json();
       
-      // The Draft/Hide Toggle Logic
-      if (data.is_published === false) {
-          document.body.innerHTML = "<div style='padding: 100px 20px; text-align: center; font-family: sans-serif;'><h1 style='font-size: 2rem; margin-bottom: 1rem;'>Page Under Construction</h1><p>This page is currently being updated. Please check back later.</p></div>";
-          return;
-      }
-
-      document.getElementById('contact-hero-headline').innerText = data.hero_headline;
-      document.getElementById('contact-hero-subhead').innerText = data.hero_subhead;
-      
-      // Update Emails and their mailto links
-      const consultingEl = document.getElementById('contact-email-consulting');
-      consultingEl.innerText = data.email_consulting;
-      consultingEl.href = "mailto:" + data.email_consulting;
-      
-      const pressEl = document.getElementById('contact-email-press');
-      pressEl.innerText = data.email_press;
-      pressEl.href = "mailto:" + data.email_press;
-
-    } catch (error) { console.error('Error loading Contact page data:', error); }
+      document.getElementById('home-hero-headline').innerText = data.hero_headline;
+      document.getElementById('home-hero-subhead').innerText = data.hero_subhead;
+    } catch (error) { console.error('Error loading Home page data:', error); }
   }
-  document.addEventListener('DOMContentLoaded', loadContactPage);
+  document.addEventListener('DOMContentLoaded', loadHomePage);
 </script>
   </body>
 </html>
