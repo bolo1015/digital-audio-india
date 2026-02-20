@@ -19,10 +19,26 @@ collections:
               - {label: "Slide Title", name: "title", widget: "string"}
               - {label: "Slide Subheadline", name: "subhead", widget: "text"}
               - {label: "Background Image", name: "image", widget: "image"}
-              - {label: "Button Link", name: "link", widget: "string", hint: "e.g., /programmatic.html or https://google.com"}
+              - {label: "Button Link", name: "link", widget: "string", required: false}
           - label: "Industry Expertise Section"
             name: "industries"
             widget: "list"
             fields:
               - {label: "Industry Name", name: "name", widget: "string"}
               - {label: "Industry Description", name: "desc", widget: "text"}
+              
+  - name: "database"
+    label: "Publishing"
+    files:
+      - file: "data/signals.json"
+        label: "Market Signals Database"
+        name: "signals"
+        fields:
+          - label: "All Market Signals"
+            name: "articles"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "Full Story", name: "body", widget: "markdown"}
