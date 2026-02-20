@@ -42,3 +42,13 @@ collections:
               - {label: "Date", name: "date", widget: "datetime"}
               - {label: "Summary", name: "summary", widget: "text"}
               - {label: "Full Story", name: "body", widget: "markdown"}
+
+  - name: "standard_pages"
+    label: "Standard Pages"
+    folder: "data/standard_pages"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Page Title", name: "title", widget: "string"}
+      - {label: "Page Content", name: "body", widget: "markdown"}
