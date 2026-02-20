@@ -19,3 +19,31 @@ collections:
       - {label: "Date", name: "date", widget: "datetime", format: "MMM DD, YYYY", date_format: "MMM DD, YYYY", time_format: false}
       - {label: "Strategic Implication", name: "implication", widget: "text"}
       - {label: "Source URL", name: "link", widget: "string"}
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - file: "data/pages/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Hero Headline", name: "hero_headline", widget: "string", default: "Architecting the Digital Audio Ecosystem."}
+          - {label: "Hero Subheadline", name: "hero_subhead", widget: "text", default: "We are the premier strategic consultancy for publishers, broadcasters, and AdTech platforms scaling digital audio across Asia."}
+      
+      - file: "data/pages/about.json"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Publish/Show Page", name: "is_published", widget: "boolean", default: true}
+          - {label: "Hero Headline", name: "hero_headline", widget: "string", default: "Architecting the Future of the Ear."}
+          - {label: "Hero Subheadline", name: "hero_subhead", widget: "text", default: "Over a decade of leading the digital transition..."}
+          - {label: "The Philosophy", name: "philosophy", widget: "text", default: "The chasm between traditional radio broadcasting..."}
+
+      - file: "data/pages/contact.json"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Publish/Show Page", name: "is_published", widget: "boolean", default: true}
+          - {label: "Contact Hero Headline", name: "hero_headline", widget: "string", default: "Initiate a Strategic Partnership."}
+          - {label: "Contact Hero Subheadline", name: "hero_subhead", widget: "text", default: "Connect with us to discuss architecting your digital audio infrastructure."}
+          - {label: "Consulting Email", name: "email_consulting", widget: "string", default: "strategy@digitalaudioindia.com"}
+          - {label: "Press Email", name: "email_press", widget: "string", default: "press@digitalaudioindia.com"}
